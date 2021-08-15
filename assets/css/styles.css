@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'AvenirHeavy';
+  src: url('../fonts/Avenir_Font/AvenirHeavy.ttf');
+}
+
+@font-face {
+  font-family: 'AvenirLight';
+  src: url('../fonts/Avenir_Font/AvenirLight.ttf');
+}
+
+@font-face {
+  font-family: 'AvenirMedium';
+  src: url('../fonts/Avenir_Font/AvenirMedium.ttf');
+}
+
+/* Account for any border and padding in the values specifed for an element's width and height */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-width: 338px;
+}
+
+/* Tile displayed at the top of the page */
+.heading {
+    color: #444;
+    font-family: 'AvenirMedium', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.33;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+/* The tic tac toe board */
+.board {
+    border: 1px solid #c4c4c4;
+    column-gap: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 338px; /* 2px larger than needed to make room for the border while using box-sizing: border-box */
+    justify-content: space-between;
+    margin: auto;
+    padding: 15px;
+    row-gap: 3px;
+    width: 338px; /* 2px larger than needed to make room for the border while using box-sizing: border-box */
+}
+
+/* All square pieces in the board */
+.board__square {
+    align-items: center;
+    border: none;
+    background: #eaeaea;
+    color: #2d4558;
+    cursor: pointer;
+    display: flex;
+    font-family: 'AvenirLight', sans-serif;
+    font-size: 58px;
+    height: 100px;
+    justify-content: center;
+    padding-top: 6px; /* Add space above the Xs and Os because Avenir is not vertically centered in its content box */
+    width: 100px;
+}
+
+.board__square--preview {
+    color: #909aa2;
+}
+
+/* Button to start a new game */
+.new-game-button {
+    align-items: center;
+    background: #2d4558;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: 24px;
+    font-family: 'AvenirHeavy', sans-serif;
+    height: 60px;
+    justify-content: center;
+    letter-spacing: 0.1em;
+    margin: auto;
+    margin-top: 32px;
+    width: 200px;
+}
